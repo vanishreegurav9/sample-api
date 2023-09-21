@@ -1,0 +1,201 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom CSS */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.full-screen-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Remove default body margin */
+  background-color: rgb(
+    23,
+    4,
+    199
+  ); /* You can change the background color as needed */
+}
+
+.full-screen-div-provider{
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Remove default body margin */
+  color: #fff;
+  background-color: rgb(
+    23,
+    4,
+    199
+  );
+}
+
+.full-screen-div-provider{
+  padding: 10px;      
+}
+
+.explore-web-api-button {
+  background-color: #0073cf;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.explore-web-api-button:hover {
+  background-color: #1c05b3;
+}
+
+button:disabled{
+  color: #808080;
+  cursor: not-allowed;
+}
+
+.apiProviders{
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.closeBtnContainer{
+  position: relative;
+}
+a.apiProviders:hover{
+  /* height: 50px; */
+  background-color: #000;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.apiProviderName{
+  /* height: 50px; */
+  width: 100%;
+  margin-bottom: 5px;
+}
+.closeButton{
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: 2px solid red;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: red;
+  text-align: center;
+}
+
+.spacer-bottom{
+  margin-bottom: 40px;
+}
+
+/*Loader CSS Start*/
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+/*Loader CSS End*/
+
+/*API Details Slider Start*/
+.side-drawer {
+  position: fixed;
+  height: 100%;
+  background: #0073cf;
+  top: 0;
+  right: 0;
+  /* right: 100%; */
+  width: 40%;
+  z-index: 9;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  /* transform: translateX(0%); */
+  transition: transform 0.3s ease-out;
+}
+.side-drawer.open {
+  transform: translateX(0);
+}
+/*API Details Slider End*/
